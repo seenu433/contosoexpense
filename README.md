@@ -21,6 +21,7 @@ If you want to learn more about creating good readme files then refer the follow
 # contosoexpense
 
 ## Tekton - CICD setup
+
 kubectl create ns conexp-devops
 
 kubectl apply -f  admin-role.yaml  -n conexp-devops
@@ -36,3 +37,6 @@ kubectl apply -f triggers.yaml -n conexp-devops
 
 kubectl apply -f webhook-run.yaml -n conexp-devops
 kubectl apply -f ingress-run.yaml -n conexp-devops
+
+Note the change in namespace to the deployment namespace
+kubectl apply -f service-account.yaml -n conexp
