@@ -38,9 +38,9 @@ spec:
         - build-docker-image-web
       params:
         - name: pathToDockerFile
-          value: Contoso.Expenses.API/Dockerfile
+          value: Dockerfile
         - name: pathToContext
-          value: /workspace/source-repo
+          value: /workspace/source-repo/Contoso.Expenses.API
       resources:
         inputs:
           - name: source-repo
@@ -146,5 +146,5 @@ spec:
         - "apply"
         - "-f"
         - "/workspace/source-repo/$(inputs.params.pathToYamlFile)"
-        - "n"
+        - "-n"
         - "$(inputs.params.deployment-namespace)"
